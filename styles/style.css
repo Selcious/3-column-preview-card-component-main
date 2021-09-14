@@ -1,0 +1,99 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+html {
+    font-size: 62.5%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p, a, h2 {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.preview-card-box {
+    display: flex;
+    flex-direction: column;
+}
+.preview-card-box h2 {
+    font-size: 3.5rem;
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.preview-card {
+    max-width: 300px;
+    padding: 4rem;
+    color: var(--paragraphs);
+    line-height: 1.5;
+}
+.preview-card:nth-child(1) {
+    background-color: var(--bright-orange);
+}
+.preview-card:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+.preview-card:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+}
+.preview-card a {
+    display: inline-block;
+    background-color: var(--very-light-gray);
+    text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid var(--very-light-gray);
+    padding: 1rem 2.5rem;
+    margin-top: 4rem;
+}
+.preview-card:nth-child(1) a {
+    color: var(--bright-orange);
+}
+.preview-card:nth-child(2) a {
+    color: var(--dark-cyan);
+}
+.preview-card:nth-child(3) a {
+    color: var(--very-dark-cyan);
+}
+.preview-card:nth-child(1) a:hover {
+    background-color: var(--bright-orange);
+}
+.preview-card:nth-child(2) a:hover {
+    background-color: var(--dark-cyan);
+}
+.preview-card:nth-child(3) a:hover {
+    background-color: var(--very-dark-cyan);
+}
+.preview-card a:hover {
+    color: var(--very-light-gray);
+}
+
+@media screen and (min-width: 992px) {
+    .preview-card-box {
+        flex-direction: row;
+    }
+    .preview-card {
+        min-height: 450px;
+        position: relative;
+    }
+    .preview-card a {
+        position: absolute;
+        bottom: 4rem;
+    }
+}
